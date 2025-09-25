@@ -1,0 +1,10 @@
+<div *ngIf="job">
+  <h2>{{ job.title }}</h2>
+  <p>{{ job.description }}</p>
+  <p><strong>Location:</strong> {{ job.location }}</p>
+  <p><strong>Skills:</strong> {{ job.skills }}</p>
+
+  <h3>Apply for this job</h3>
+  <input type="file" (change)="onFileChange($event)" />
+  <button (click)="apply()">Submit Application</button>
+</div>
